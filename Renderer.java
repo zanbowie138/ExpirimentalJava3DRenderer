@@ -36,7 +36,7 @@ public class Renderer {
     }
     public void render(int frameCount) {
         bImg = new BufferedImage(screen_width, screen_height, BufferedImage.TYPE_INT_RGB);
-        cube.setRotation(new double[] {0,(frameCount%36)*10,0});
+        cube.setRotation(new double[] {0,(frameCount%72)*5,(frameCount%72)*5});
         cam.print(bImg,new RenderableObject[] {cube});
         display.render(this);
     }

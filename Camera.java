@@ -172,10 +172,6 @@ class Camera {
           double[] camSightVec = v3.getDirectionv3(getPositionDouble(),line_end_points[w][h]);
           double distToPoint = v3.dotv3(camToCenter, camSightVec);
           double[] possibleInt = v3.addv3(getPositionDouble(),v3.mult_scalar(camSightVec,distToPoint));
-          //System.out.println(Arrays.toString(camSightVec));
-          //System.out.println(distToPoint);
-          //System.out.println(Arrays.toString(possibleInt));
-          //System.out.println(v3.getDistance(possibleInt,point));
         
           //If no intersection, continue
           if (v3.getDistance(possibleInt,point) > size/2) { 
@@ -211,15 +207,16 @@ class Camera {
     int[][] master_colors = new int[width][height];
     boolean[][] master_bool = new boolean[width][height];
 
-    //Renders the already calculated "best_int" array onto the inputted bufferedImage, making intersections close to the camera bright and far away from the camera dim.
     for (RenderableObject obj : obj_arr) {
       obj.resetPoints();
       this.renderObject(obj);
       obj.generateColorValues(this.getPositionDouble());
+
       for (int w = 0; w < width; w++) {
         for (int h = 0; h < height; h++) {
           double[] point = obj.getIntersectionPoint(w, h);
           int color = obj.getColorValue(w,h);
+
           if (obj.getValueTaken(w,h)) {
             if (master_bool[w][h]) {
               if (this.getDistance(point) < this.getDistance(master_ints[w][h])) {
@@ -233,6 +230,7 @@ class Camera {
               master_bool[w][h] = true;
             }
           }
+          
         }
       }  
     }
