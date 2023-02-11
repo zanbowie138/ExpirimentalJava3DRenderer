@@ -1,3 +1,7 @@
+package solids;
+import utils.renderutils;
+import utils.v3;
+
 public class Cube extends RenderableObject{
   int[] center;
   double size;

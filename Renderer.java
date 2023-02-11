@@ -1,4 +1,8 @@
 import java.awt.image.BufferedImage;
+
+import solids.Camera;
+import solids.Cube;
+import solids.RenderableObject;
 public class Renderer {
     private Display display;
 

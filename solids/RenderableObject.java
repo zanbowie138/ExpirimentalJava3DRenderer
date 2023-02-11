@@ -1,5 +1,8 @@
+package solids;
 import java.util.Arrays;
-class RenderableObject {
+
+import utils.v3;
+public class RenderableObject {
   int[][] color_values;
   double[][][] intersection_points;
   boolean[][] values_taken;

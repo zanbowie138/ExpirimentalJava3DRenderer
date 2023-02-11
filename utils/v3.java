@@ -1,4 +1,5 @@
-class v3 {
+package utils;
+public class v3 {
   public static double[] addv3(double[] arr1, double[] arr2) {
     return new double[] {
     arr1[0] + arr2[0],

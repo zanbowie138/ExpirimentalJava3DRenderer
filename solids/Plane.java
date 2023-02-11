@@ -1,3 +1,4 @@
+package solids;
 public class Plane extends RenderableObject{
   int[] point;
   double[] normal_vector;

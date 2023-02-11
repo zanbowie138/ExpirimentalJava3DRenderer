@@ -1,4 +1,7 @@
+package solids;
 import java.util.Arrays;
+
+import utils.v3;
 public class Sphere extends RenderableObject {
   int size;
   int[] point;

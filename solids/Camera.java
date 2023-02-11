@@ -1,5 +1,9 @@
+package solids;
 import java.awt.image.BufferedImage;
-class Camera {
+
+import utils.renderutils;
+import utils.v3;
+public class Camera {
   int[] position;
   int width;
   int height;
